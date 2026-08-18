@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FitGuide - Learn exercise form, breathing, common mistakes and basic workout guidance.">
+    <title>FitGuide - Gym Exercise Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            💪 FitGuide
+            <small>Owner: Dev Tripathi</small>
+        </div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#exercises">Exercises</a>
+            <a href="#categories">Categories</a>
+            <a href="#beginner">Beginner Guide</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="badge">🏋️ Beginner Friendly</span>
+
+            <h1>
+                Learn Every Exercise
+                <span>the Right Way</span>
+            </h1>
+
+            <p>
+                Learn proper exercise form, movement, breathing,
+                common mistakes and basic workout guidance.
+            </p>
+
+            <a href="#exercises" class="primary-btn">
+                Explore Exercises →
+            </a>
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+        <div class="search-box">
+            <span>🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search exercise..."
+                aria-label="Search exercise"
+            >
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
+        <div class="section-title">
+            <span>TRAINING</span>
+            <h2>Exercise Categories</h2>
+            <p>Choose a muscle group to find suitable exercises.</p>
+        </div>
+
+        <div class="category-grid">
+            <button class="category-card" data-category="Chest">
+                <span>💪</span>
+                <h3>Chest</h3>
+            </button>
+
+            <button class="category-card" data-category="Back">
+                <span>🪽</span>
+                <h3>Back</h3>
+            </button>
+
+            <button class="category-card" data-category="Shoulders">
+                <span>🏋️</span>
+                <h3>Shoulders</h3>
+            </button>
+
+            <button class="category-card" data-category="Biceps">
+                <span>💪</span>
+                <h3>Biceps</h3>
+            </button>
+
+            <button class="category-card" data-category="Triceps">
+                <span>🦾</span>
+                <h3>Triceps</h3>
+            </button>
+
+            <button class="category-card" data-category="Legs">
+                <span>🦵</span>
+                <h3>Legs</h3>
+            </button>
+
+            <button class="category-card" data-category="Core">
+                <span>🔥</span>
+                <h3>Core</h3>
+            </button>
+
+            <button class="category-card" data-category="Full Body">
+                <span>🏆</span>
+                <h3>Full Body</h3>
+            </button>
+        </div>
+    </section>
+
+    <!-- EXERCISES -->
+    <section class="section exercises-section" id="exercises">
+        <div class="section-title">
+            <span>EXERCISE LIBRARY</span>
+            <h2>Find Your Exercise</h2>
+            <p>Learn how to perform exercises with proper technique.</p>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="All">All</button>
+            <button class="filter-btn" data-filter="Beginner">Beginner</button>
+            <button class="filter-btn" data-filter="Intermediate">Intermediate</button>
+        </div>
+
+        <!-- EXERCISE GRID -->
+        <div class="exercise-grid" id="exerciseGrid">
+
+            <!-- PUSH UPS -->
+            <article class="exercise-card"
+                data-name="Push Ups"
+                data-category="Chest"
+                data-level="Beginner">
+
+                <div class="exercise-image">
+                    <span>🤸</span>
+                </div>
+
+                <div class="exercise-info">
+                    <span class="level beginner">Beginner</span>
+                    <h3>Push Ups</h3>
+                    <p>A basic bodyweight exercise for chest, shoulders and triceps.</p>
+
+                    <div class="exercise-meta">
+                        <span>💪 Chest</span>
+                        <span>🏠 No Equipment</span>
+                    </div>
+
+                    <button class="guide-btn" data-exercise="Push Ups">
+                        View Guide →
+                    </button>
+                </div>
+            </article>
+
+            <!-- BENCH PRESS -->
+            <article class="exercise-card"
+                data-name="Bench Press"
+                data-category="Chest"
+                data-level="Intermediate">
+
+                <div class="exercise-image">
+                    <span>🏋️</span>
+                </div>
+
+                <div class="exercise-info">
+                    <span class="level intermediate">Intermediate</span>
+                    <h3>Bench Press</h3>
+                    <p>A resistance exercise targeting the chest, shoulders and triceps.</p>
+
+                    <div class="exercise-meta">
+                        <span>💪 Chest</span>
+                        <span>🏋️ Barbell</span>
+                    </div>
+
+                    <button class="guide-btn" data-exercise="Bench Press">
+                        View Guide →
+                    </button>
+                </div>
+            </article>
+
+            <!-- LAT PULLDOWN -->
+            <article class="exercise-card"
+                data-name="Lat Pulldown"
+                data-category="Back"
+                data-level="Beginner">
+
+                <div class="exercise-image">
+                    <span>🪽</span>
+                </div>
+
+                <div class="exercise-info">
+                    <span class="level beginner">Beginner</span>
+                    <h3>Lat Pulldown</h3>
+                    <p>A machine exercise for developing the back and upper-body pulling muscles.</p>
+
+                    <div class="exercise-meta">
+                        <span>🪽 Back</span>
+                        <span>🏋️ Machine</span>
+                    </div>
+
+                    <button class="guide-btn" data-exercise="Lat Pulldown">
+                        View Guide →
+                    </button>
+                </div>
+            </article>
+
+            <!-- DUMBBELL CURL -->
+            <article class="exercise-card"
+                data-name="Dumbbell Curl"
+                data-category="Biceps"
+                data-level="Beginner">
+
+                <div class="exercise-image">
+                    <span>💪</span>
+                </div>
+
+                <div class="exercise-info">
+                    <span class="level beginner">Beginner</span>
+                    <h3>Dumbbell Curl</h3>
+                    <p>A simple resistance exercise that trains the biceps.</p>
+
+                    <div class="exercise-meta">
+                        <span>💪 Biceps</span>
+                        <span>🏋️ Dumbbells</span>
+                    </div>
+
+                    <button class="guide-btn" data-exercise="Dumbbell Curl">
+                        View Guide →
+                    </button>
+                </div>
+            </article>
+
+            <!-- SQUATS -->
+            <article class="exercise-card"
+                data-name="Squats"
+                data-category="Legs"
+                data-level="Beginner">
+
+                <div class="exercise-image">
+                    <span>🦵</span>
+                </div>
+
+                <div class="exercise-info">
+                    <span class="level beginner">Beginner</span>
+                    <h3>Squats</h3>
+                    <p>A fundamental lower-body movement for the legs and hips.</p>
+
+                    <div class="exercise-meta">
+                        <span>🦵 Legs</span>
+                        <span>🏠 Bodyweight</span>
+                    </div>
+
+                    <button class="guide-btn" data-exercise="Squats">
+                        View Guide →
+                    </button>
+                </div>
+            </article>
+
+            <!-- PLANK -->
+            <article class="exercise-card"
+                data-name="Plank"
+                data-category="Core"
+                data-level="Beginner">
+
+                <div class="exercise-image">
+                    <span>🔥</span>
+                </div>
+
+                <div class="exercise-info">
+                    <span class="level beginner">Beginner</span>
+                    <h3>Plank</h3>
+                    <p>An isometric exercise that trains the core and stability.</p>
+
+                    <div class="exercise-meta">
+                        <span>🔥 Core</span>
+                        <span>🏠 No Equipment</span>
+                    </div>
+
+                    <button class="guide-btn" data-exercise="Plank">
+                        View Guide →
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- BEGINNER GUIDE -->
+    <section class="section beginner-section" id="beginner">
+        <div class="section-title">
+            <span>START HERE</span>
+            <h2>Beginner Guide</h2>
+        </div>
+
+        <div class="guide-grid">
+            <div class="guide-item">
+                <span>🔥</span>
+                <h3>Warm Up</h3>
+                <p>Start your workout with an appropriate warm-up to prepare your body.</p>
+            </div>
+
+            <div class="guide-item">
+                <span>🎯</span>
+                <h3>Focus on Form</h3>
+                <p>Learn the movement correctly before increasing resistance.</p>
+            </div>
+
+            <div class="guide-item">
+                <span>💧</span>
+                <h3>Stay Hydrated</h3>
+                <p>Drink enough water during your workout according to your needs.</p>
+            </div>
+
+            <div class="guide-item">
+                <span>😴</span>
+                <h3>Recover</h3>
+                <p>Give your body adequate rest and recovery between training sessions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAFETY -->
+    <section class="safety-section">
+        <div class="safety-box">
+            <span>⚠️</span>
+
+            <div>
+                <h3>Safety First</h3>
+                <p>
+                    This website provides general fitness education.
+                    Stop exercising if you feel pain or feel unwell.
+                    Seek guidance from a qualified fitness professional
+                    or healthcare professional when appropriate.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXERCISE GUIDE MODAL -->
+    <div class="modal" id="exerciseModal" role="dialog" aria-modal="true" aria-label="Exercise guide">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal" aria-label="Close guide">×</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="logo">💪 FitGuide</div>
+        <p>Learn. Train. Move Better.</p>
+        <p class="copyright">© 2026 FitGuide | Owner: Dev Tripathi</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
